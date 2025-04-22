@@ -28,7 +28,12 @@ but you won't have to wait days to create each index and see if it works correct
    $ docker rm $(docker ps -qa)
    $ docker volume prune --all
    ```
-   This will free up a lot of disk space so that you won't run out for this assignment.
+   This will free up a lot of disk space and other resources.
+
+   > **WARNING:**
+   > Your lambda server resources have been carefully allocated so that you can complete this assignment without exceeding resource limitations.
+   > If you still have docker "stuff" from past assignments using resources,
+   > however, you are likely to run out of resources and get inscrutable error messages.
 
 1. Modify the `docker-compose.yml` file so that the ports for each of the services are distinct.
 
