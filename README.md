@@ -9,20 +9,16 @@ Now your goal will be to make the SELECT queries fast.
 
 For this assignment, we will work with 10 days of twitter data, about 31 million tweets.
 This is enough data that indexes will dramatically improve query times,
-but you won't have to wait hours/days to create each index and see if it works correctly.
+but you won't have to wait days to create each index and see if it works correctly.
 
-**due date:** ~~Thursday 18 April~~
+> **WARNING:**
+> This assignment can put lots of load on the lambda server.
+> Depending on the lambda server's current load, you may have to wait up to 12 hours for individual CREATE INDEX commands to run.
+> If you wait until the last minute,
+> you are very likely to not finish on time.
+> THERE WILL BE NO EXTENSIONS FOR THIS ASSIGNMENT.
 
-1. graduating students: ~~Sunday 21 April~~ Tuesday 30 April
-
-    I recommend it to be submitted before your final exam, so I can give you your final grade during the exam.
-
-1. non-graduating students: Tuesday 30 April
-
-    This assignment can put lots of load on the lambda server.
-    My motivation for extending the due date for non-graduating students, is to have less contention for resources for the graduating students.
-
-## Step 0: Prepare the repo/docker
+## Step 0: Setup
 
 1. Fork this repo, and clone your fork onto the lambda server.
 
@@ -42,7 +38,6 @@ but you won't have to wait hours/days to create each index and see if it works c
     ```
 
 1. Notice that the `docker-compose.yml` file uses a [bind mount](https://docs.docker.com/storage/bind-mounts/) into your `$HOME/bigdata` directory whereas all of our previous assignments stored data into a [named volume](https://docs.docker.com/storage/volumes/).
-
 
     This is necessary because in this assignment, you will be creating approximately 100GB worth of databases.
     This won't fit in your home folder on the NVME drive (10G limit), and so you must put it into the HDD drives (250G limit).
@@ -91,7 +86,7 @@ but you won't have to wait hours/days to create each index and see if it works c
 
     > **Hint:**
     > If you need help deleting the data for whatever reason,
-    > let me know and I can delete it for you as a root user.
+    > let me (or the TA) know and we can delete it for you as a root user.
 
 ## Step 1: Load the Data
 
