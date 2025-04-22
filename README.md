@@ -299,7 +299,7 @@ since this assignment uses too much disk space and computation.
 In general, there are no great techniques for benchmarking/testing programs on large datasets.
 The best solution is to test on small datasets (like we did for the first versions of twitter\_postgres),
 and carefully design those tests so that they ensure good performance on the large datasets.
-We're not following this procedure, however, to ensure that you get some actual practice with these larger datasets.
+But runtime issues involving bad indexes are notorious for causing production related issues that can not be reproduced/debugged in a development environment.
 
 To submit your assignment:
 
