@@ -1,0 +1,6 @@
+nohup: ignoring input
+time="2025-05-05T19:11:18-07:00" level=warning msg="/home/Stella.Cheng.25/bigdata/twitter_postgres_indexes/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ERROR:  relation "idx_tweet_tags_tag_idtweets" already exists
+ERROR:  relation "idx_tweet_tags_idtweets_tag" already exists
+CREATE INDEX
+ERROR:  canceling statement due to user request
